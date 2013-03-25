@@ -21,7 +21,7 @@ Rectangle {
         id: queryOperation
         client: client
         model: todos
-        objectType: "objects.todos"
+        objectTypes: ["objects.todos"]
         onFinished: {
             console.log("Query finished");
             console.log("Model rows: " + model.rowCount);
