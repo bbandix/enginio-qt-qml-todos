@@ -1,23 +1,23 @@
 import QtQuick 2.0
-import io.engin 1.0 as Enginio
+import Enginio 1.0
 import "applicationconfig.js" as AppConfig
 
 Rectangle {
     width: 360
     height: 360
 
-    Enginio.Client {
+    Client {
         id: client
         backendId: AppConfig.backendData.id
         backendSecret: AppConfig.backendData.secret
         apiUrl: AppConfig.backendData.apiUrl
     }
 
-    Enginio.ObjectModel {
+    ObjectModel {
         id: todos
     }
 
-    Enginio.QueryOperation {
+    QueryOperation {
         id: queryOperation
         client: client
         model: todos
